@@ -1,0 +1,40 @@
+show databases;
+create database sales;
+use sales;
+show tables;
+ create table salespeople
+ (
+	Snum int(4),
+	Sname varchar(10),
+	City varchar(10),
+	Comm float(3,2)
+);
+
+insert into salespeople values(1003,'Axelrod','New York',.10);
+select * from salespeople;
+
+ create table customers
+ (
+	Cnum int(4),
+    Cname varchar(10),
+    City varchar(10),
+    Rating int(4),
+    Snum int(4)
+);
+
+insert into customers values(2007,'Pereira','Rome',100,1004);
+select * from customers;
+
+create table orders
+(
+	Onum int(4),
+    Amt float(7,2),
+    Odate date,
+    Cnum int(4),
+    Snum int(4)
+);
+
+insert into orders values(3011,9891.88,'1990-10-06',2006,1001);
+select * from orders;
+
+
